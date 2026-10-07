@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route, NavLink, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import logo from '../logo.svg'
 import { routes } from './routes'
 
@@ -24,7 +24,6 @@ export const Navigation = () => {
               <Route key={path} path={path} element={<Component />} />
             ))}
             <Route path="/*" element={<h1>404 Not Found</h1>} />
-            {/* <Route path="/*" element={<Navigate to={routes[0].to} replace />} /> */}
           </Routes>
         </div>
       </Router>
